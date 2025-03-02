@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karimboyev Karimboy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap">
+
+    <style>
+        body {
+            background-color: #eee9e9;
+            background-image: url('https://images.pexels.com/photos/925743/pexels-photo-925743.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-size: cover;
+            background-position: center;
+            color: antiquewhite;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            padding-top: 10px; /* Barcha elementlarni yuqoriroqqa siljitish uchun */
+            font-family: Arial, sans-serif;
+        }
+
+        p {
+            color: #630f57;
+            font-size: 16px;
+            font-weight: 400;
+            text-align: center;
+            margin: 20px 10px;
+        }
+
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            background-color: #eee9e9;
+            padding: 10px;
+            gap: 5px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+            padding: 10px;
+            font-size: 28px;
+            color: #630f57;
+            background-color: #eee9e9;
+            text-decoration: none;
+            border: none;
+            border-radius: 10px;
+            transition: background-color 0.3s, transform 0.2s;
+            pointer-events: auto;
+        }
+
+        .btn:hover {
+            background-color: #630f57;
+            transform: scale(1.1);
+            color: #eee9e9;
+            box-shadow: 0 8px 16px rgba(99, 15, 87, 0.4);
+            cursor: pointer;
+        }
+
+        .flag-container {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .flag {
+            width: 40px;
+            height: 30px;
+            cursor: pointer;
+            
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                background-size: cover;
+                background-position: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="flag-container">
+        <img src="https://flagcdn.com/w320/uz.png" alt="Uzbek" class="flag" onclick="changeLanguage('uz')">
+        <img src="https://flagcdn.com/w320/gb.png" alt="English" class="flag" onclick="changeLanguage('en')">
+        <img src="https://flagcdn.com/w320/ru.png" alt="Russian" class="flag" onclick="changeLanguage('ru')">
+    </div>
+
+    <p id="greeting">Assalomu aleykum foydalanuvchi, siz ushbu sahifada quyidagilar bilan menga istalgan yo'l orqali bog'lanishingiz mumkin</p>
+    
+    <div class="btn-container">
+        <a href="tel:+998918623808" class="btn"><i class="fa-solid fa-phone"></i> Call</a>
+        <a href="sms:+998918623808" class="btn"><i class="fa-solid fa-comment-sms"></i> Sms</a>
+        <a href="mailto:mrkarimboyev@gmail.com" class="btn"><i class="fa-solid fa-envelope"></i> Email</a>
+        <a href="https://t.me/mrkarimboyev" class="btn"><i class="fa-brands fa-telegram"></i> Telegram</a>
+        <a href="https://youtube.com/@MrKarimboyev" class="btn"><i class="fa-brands fa-youtube"></i> Youtube</a>
+        <a href="https://maps.google.com/maps?q=41.498595,60.783259&ll=41.498595,60.783259&z=16" class="btn" target="_blank">
+            <i class="fa-solid fa-map-marker-alt"></i> Location</a>
+        <a href="https://t.me/code_converse" class="btn"><i class="fa-brands fa-telegram"></i> Join to channel</a>
+    </div>
+
+    
+    <br><a href="Karimboyev's.html" download="Web sahifa" class="btn" style="background-color: #630f57; color: #eee9e9; ">Download</a>
+    
+
+    <script>
+        function changeLanguage(lang) {
+            const greeting = document.getElementById('greeting');
+            if (lang === 'uz') {
+                greeting.innerText = 'Assalomu aleykum foydalanuvchi, siz ushbu sahifada quyidagilar orqali menga istalgan yo\'l orqali bog\'lanishingiz mumkin';
+            } else if (lang === 'en') {
+                greeting.innerText = 'Hello user, you can contact me through any of the following methods';
+            } else if (lang === 'ru') {
+                greeting.innerText = 'Привет пользователь, вы можете связаться со мной любым из следующих способов';
+            }
+        }
+        
+
+    </script>
+</body>
+</html>
